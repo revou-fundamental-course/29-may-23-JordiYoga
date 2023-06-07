@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .city {
+  display: inline-block;
+}
+
+.city img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal img {
+  width: 80%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.modal h2, .modal p {
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.close {
+  color: #fff;
+  font-size: 35px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="city">
+      <img src="https://mbelajarin.com/wp-content/uploads/2023/02/3816aa13baa8e522f8e9bd18456b7db6_revou_logo.png" alt="Kota" onclick="showCityDetails('kota.jpg', 'Nama Kota', 'Deskripsi Kota')">
+    </div>
+    
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="imgModal" src="https://mbelajarin.com/wp-content/uploads/2023/02/3816aa13baa8e522f8e9bd18456b7db6_revou_logo.png" alt="Kota">
+      <h2 id="cityName"></h2>
+      <p id="cityDescription"></p>
+    </div>
+  </header>
+  <script>
+  function showCityDetails(imageSrc, cityName, cityDescription) {
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("imgModal");
+  var modalCityName = document.getElementById("cityName");
+  var modalCityDescription = document.getElementById("cityDescription");
+
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+  modalCityName.textContent = cityName;
+  modalCityDescription.textContent = cityDescription;
+}
+
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+
+  </script>
+</body>
+</html>
