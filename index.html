@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RevoU</title>
+    <link rel="stylesheet" href="/RevoU/css/style.css">
 </head>
+
 <body>
-    
+
+    <!--Logo dan Navbar-->
+    <header>
+        <img src="/RevoU/img/Logo-RevoU.png" alt="revoU logo" class="logo">
+        <div class="nav-bar">
+            <div class="nav-item"><b>Home</b></div>
+            <div class="nav-item"><a href="profile.html"><b> Our Profile</b></a></div>
+            <div class="nav-item"><b>Portofolio</b></div>
+            <div class="nav-item"><b>Massage-Us</b></div>
+        </div>
+    </header>
+    <div id="hero" class="hero">
+        <h1>Hi Jordi, Welcome to Website!</h1>
+        <h2>Ini adalah website latihan pertama.</h2>
+        <p></p>
+    </div>
+
+    <!--Headquartere-->
+    <div id="headquartere-section">
+        <h1>Headquarters</h1>
+        <div class="wrapper">
+            <div class="headquartere-image-container">
+                <div class="headquartere-image">
+                    <img src="/RevoU/img/jakarta.jpg" alt="headquartere-image">
+                </div>
+                <p>Jakarta</p>
+            </div>
+            <div class="headquartere-image-container">
+                <div class="headquartere-image">
+                    <img src="/RevoU/img/surabaya.jpg" alt="headquartere-image">
+                </div>
+                <p>Surabaya</p>
+            </div>
+            <div class="headquartere-image-container">
+                <div class="headquartere-image">
+                    <img src="/RevoU/img/bandung.jpeg" alt="headquartere-image">
+                </div>
+                <p>Bandung</p>
+            </div>
+        </div>
+    </div>
+
+    <!--massageUs-->
+    <div id="massage-us-section" class="massage-us">
+        <h1>Massage-Us</h1>
+        <form action="">
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><input id="input-nama" type="text" name="nama" value="" required></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td><input id="tanggal-lahir" type="date" name="tanggal-lahir" required></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <input id="jenis-kelamin-laki" type="radio" name="gender" value="laki-laki" required>
+                        <label for="jenis-kelamin-laki">Laki-Laki</label>
+                        <input id="jenis-kelamin-perempuan" type="radio" name="gender" value="perempuan" required>
+                        <label for="jenis-kelamin-perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pesan</td>
+                    <td>:</td>
+                    <td><textarea id="pesan" name="pesan" value="" required></textarea></td>
+                </tr>
+            </table>
+            <div id="output">
+                <button onclick="showOutput()">Kirim</button>
+            </div>
+        </form>
+    </div>
+
+    <footer><b>@Created by Revou</b></footer>
+
+    <script src="/RevoU/js/script.js></script>
 </body>
+
 </html>
